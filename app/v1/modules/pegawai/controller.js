@@ -4,7 +4,7 @@ const service = require('./service')
 
 async function fetchAll(req, res) {
   const data = await service.fetchAll()
-  res.status(200).send(response(200, 'Get data pegawai successfully', data))
+  res.status(data.statusCode).send(response(data.statusCode, data.message, data.result))
 }
 
 module.exports = {
