@@ -1,20 +1,13 @@
 "use strict"
+const response = require('../../../../helpers/WebResponse')
 const repo = require('./repository')
 
 async function fetchAll() {
   const data = await repo.fetchAll()
   if(data.error == null) {
-    return {
-      statusCode: 200,
-      message: 'Get data pegawai successfully',
-      result: data.res
-    }
+    return response(200, 'Get data pegawai successfully', data.res)
   }
-  return {
-    statusCode: 400,
-    message: 'Get data pegawai unsuccessfully',
-    result: data.error
-  }
+  return response(400, 'Get data pegawai unsuccessfully', data.error)
 }
 
 module.exports = {
