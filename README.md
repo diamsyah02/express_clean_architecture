@@ -1,7 +1,7 @@
 # express_clean_architecture
  Clean Architecture For Express JS
 # Alur coding
- - index.js
+ - index.js (folder root project)
  - index.js (folder routes)
  - routes.js (folder app/v1)
  - routes.js (folder app/v1/modules/pegawai)
