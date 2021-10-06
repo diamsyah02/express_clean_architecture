@@ -7,9 +7,15 @@ async function fetchAll() {
   const data = await new Promise((resolve) =>
     db.query(sql, function (error, res) {
       if (error) {
-        return null
+        return {
+          error: error,
+          res: null
+        }
       }
-      return resolve(res)
+      return resolve({
+        error: null,
+        res: res
+      })
     })
   );
   return data
