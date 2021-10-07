@@ -1,5 +1,11 @@
 # express_clean_architecture
  Clean Architecture For Express JS
+# Package
+ - body-parser
+ - cors
+ - dotenv
+ - express
+ - mysql
 # Alur coding
  - index.js (folder root project)
  - index.js (folder routes)
