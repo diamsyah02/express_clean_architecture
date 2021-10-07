@@ -6,7 +6,7 @@ const table = 'pegawai'
 
 async function fetchAll() {
   const sql = `SELECT * FROM ${table}`
-  return ExecuteQuery(sql)
+  return await ExecuteQuery(sql)
 }
 
 module.exports = {
