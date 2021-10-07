@@ -1,24 +1,12 @@
 "use strict"
-const db = require('../../../../configs/db')
+
+const ExecuteQuery = require("../../../../helpers/ExecuteQuery")
+
 const table = 'pegawai'
 
 async function fetchAll() {
   const sql = `SELECT * FROM ${table}`
-  const data = await new Promise((resolve) =>
-    db.query(sql, function (error, res) {
-      if (error) {
-        return {
-          error: error,
-          res: null
-        }
-      }
-      return resolve({
-        error: null,
-        res: res
-      })
-    })
-  );
-  return data
+  return ExecuteQuery(sql)
 }
 
 module.exports = {
