@@ -4,12 +4,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const routes = require('./routes')
-const db = require('./configs/db')
 require('dotenv').config()
-
-db.connect(function(err){
-  if(err) throw err
-})
 
 app.use(cors())
 app.listen(process.env.PORT)
