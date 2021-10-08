@@ -6,7 +6,7 @@
  - dotenv
  - express
  - mysql
-# Alur coding
+# Alur routes
  - index.js (folder root project)
  - index.js (folder routes)
  - routes.js (folder app/v1)
