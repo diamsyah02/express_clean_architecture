@@ -2,9 +2,9 @@
 
 const controller = require('./controller')
 
-async function AuthRoute(app, prefix) {
-  await app.route(`${prefix}/register`).post(controller.register)
-  await app.route(`${prefix}/login`).post(controller.login)
+async function AuthRoute(app) {
+  await app.route(`${process.env.V1}/register`).post(controller.register)
+  await app.route(`${process.env.V1}/login`).post(controller.login)
 }
 
 module.exports = AuthRoute

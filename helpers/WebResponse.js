@@ -1,6 +1,6 @@
 "use strict"
 
-function response(statusCode, message, results) {
+const response = (statusCode, message, results) => {
   return {
     statusCode: statusCode,
     message: message,

@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const response = require('../WebResponse')
 require('dotenv').config()
 
-async function AuthMiddleware(req, res, next){
+const AuthMiddleware = async (req, res, next) => {
     const token = (req.headers['authorization'] != undefined) ? req.headers['authorization'].substr(7) : null
     if(token){
         jwt.verify(token, process.env.KEY, (err, decoded) => {

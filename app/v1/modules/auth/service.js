@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
-async function register(req) {
+const register = async (req) => {
   const checkUsername = await repo.checkUsername(req)
   if(checkUsername.length == 0) {
     const data = await repo.register(req)
@@ -16,7 +16,7 @@ async function register(req) {
   }
 }
 
-async function login(req) {
+const login = async (req) => {
   const { username, password } = req.body
   const data = await repo.checkUsername(req)
   if(data.length > 0) {

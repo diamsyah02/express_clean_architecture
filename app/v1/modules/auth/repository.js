@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const db = require('../../../../configs/db')
 const table = 'users'
 
-async function register(req) {
+const register = async (req) => {
   const { username, password } = req.body
   const salt = await bcrypt.genSalt(10)
   const password_hashing = await bcrypt.hash(password, salt)
@@ -12,7 +12,7 @@ async function register(req) {
   return save
 }
 
-async function checkUsername(req) {
+const checkUsername = async (req) => {
   const { username } = req.body
   const data = await db(table).where('username', username)
   return data
