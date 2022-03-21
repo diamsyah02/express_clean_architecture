@@ -1,7 +1,7 @@
 "use strict"
 
-const RouteV1 = require('../app/v1/routes')
-const response = require('../helpers/WebResponse')
+const RouteV1 = require('@v1/routes')
+const response = require('@helpers/WebResponse')
 
 const routes = async function (app) {
     await app.route('/').get(function (req, res) {

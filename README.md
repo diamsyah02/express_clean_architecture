@@ -6,6 +6,8 @@
  - dotenv
  - express
  - mysql
+ - jest
+ - module-alias
 # Alur routes
  - index.js (folder root project)
  - index.js (folder routes)

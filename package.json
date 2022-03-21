@@ -4,7 +4,7 @@
   "description": "clean architecture for express js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Diamsyah M Dida",
   "license": "ISC",
@@ -14,8 +14,15 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jest": "^27.5.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.11",
+    "module-alias": "^2.2.2",
     "mysql": "^2.18.1"
+  },
+  "_moduleAliases": {
+    "@helpers/*" : "helpers/",
+    "@configs/*" : "configs/",
+    "@v1/*"  : "app/v1/"
   }
 }

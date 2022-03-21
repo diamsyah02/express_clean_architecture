@@ -4,26 +4,26 @@ const service = require('./service')
 
 const fetchAll = async (req, res) => {
   const data = await service.fetchAll()
-  res.status(data.statusCode).send(data)
+  res.send(data).status(data.statusCode)
 }
 const fetchDetail = async (req, res) => {
   const data = await service.fetchDetail(req)
-  res.status(data.statusCode).send(data)
+  res.send(data).status(data.statusCode)
 }
 
 const store = async (req, res) => {
   const data = await service.store(req)
-  res.status(data.statusCode).send(data)
+  res.send(data).status(data.statusCode)
 }
 
 const update = async (req, res) => {
   const data = await service.update(req)
-  res.status(data.statusCode).send(data)
+  res.send(data).status(data.statusCode)
 }
 
 const remove = async (req, res) => {
   const data = await service.remove(req)
-  res.status(data.statusCode).send(data)
+  res.send(data).status(data.statusCode)
 }
 
 module.exports = {

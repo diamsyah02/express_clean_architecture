@@ -1,7 +1,7 @@
 "use strict"
 
 const jwt = require('jsonwebtoken')
-const response = require('../WebResponse')
+const response = require('@helpers/WebResponse')
 require('dotenv').config()
 
 const AuthMiddleware = async (req, res, next) => {
