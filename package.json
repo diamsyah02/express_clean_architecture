@@ -21,8 +21,8 @@
     "mysql": "^2.18.1"
   },
   "_moduleAliases": {
-    "@helpers/*" : "helpers/",
-    "@configs/*" : "configs/",
-    "@v1/*"  : "app/v1/"
+    "@helpers/*": "helpers/",
+    "@configs/*": "configs/",
+    "@v1/*": "app/v1/"
   }
 }
